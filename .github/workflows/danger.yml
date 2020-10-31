@@ -16,9 +16,8 @@ jobs:
   danger:
     runs-on: macos-latest
     steps:
-      - name: Install SwiftLint
-        run: |
-          brew install swiftlint
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Install RubyGems
         run:
           bundle install --path=vendor/bundle
