@@ -129,12 +129,21 @@
 		9D9A90582538FFC200EA95B3 /* DropdownMenu */ = {
 			isa = PBXGroup;
 			children = (
-				9DB701DB254A597D00CD327D /* Internals */,
 				9D9A90592538FFC200EA95B3 /* DropdownMenu.h */,
 				9D9A905A2538FFC200EA95B3 /* Info.plist */,
 				9D9A90612538FFDA00EA95B3 /* DropdownMenu.swift */,
+				9DACC3E2254D14F000C2AE13 /* DropdownMenu+DropdownMenuContentViewControllerDelegate.swift */,
+				9DACC3E6254D159900C2AE13 /* DropdownMenu+InternalFunctions.swift */,
 				9D9A90632539013600EA95B3 /* DropdownMenuDataSource.swift */,
 				9D9C144C25391672008FFCC5 /* DropdownMenuDelegate.swift */,
+				9DB701D7254A4F3F00CD327D /* DropdownMenuComponentButton.swift */,
+				9DB701DC254A59AC00CD327D /* DropdownMenuTableViewCell.swift */,
+				9DACC400254D1C7F00C2AE13 /* DropdownMenuContentViewControllerDelegate.swift */,
+				9DB701CF254A257400CD327D /* DropdownMenuContentViewController.swift */,
+				9DACC405254D1CB100C2AE13 /* DropdownMenuContentViewController+UIRecognizerDelegate.swift */,
+				9DACC3FB254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift */,
+				9DB7023D254AC05D00CD327D /* DropdownMenuTransition.swift */,
+				9DB701D3254A46A500CD327D /* Constants.swift */,
 			);
 			path = DropdownMenu;
 			sourceTree = "<group>";
@@ -155,23 +164,6 @@
 			);
 			path = Example;
 			sourceTree = SOURCE_ROOT;
-		};
-		9DB701DB254A597D00CD327D /* Internals */ = {
-			isa = PBXGroup;
-			children = (
-				9DB701D7254A4F3F00CD327D /* DropdownMenuComponentButton.swift */,
-				9DB701DC254A59AC00CD327D /* DropdownMenuTableViewCell.swift */,
-				9DACC400254D1C7F00C2AE13 /* DropdownMenuContentViewControllerDelegate.swift */,
-				9DB701CF254A257400CD327D /* DropdownMenuContentViewController.swift */,
-				9DACC405254D1CB100C2AE13 /* DropdownMenuContentViewController+UIRecognizerDelegate.swift */,
-				9DACC3FB254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift */,
-				9DB7023D254AC05D00CD327D /* DropdownMenuTransition.swift */,
-				9DB701D3254A46A500CD327D /* Constants.swift */,
-				9DACC3E2254D14F000C2AE13 /* DropdownMenu+DropdownMenuContentViewControllerDelegate.swift */,
-				9DACC3E6254D159900C2AE13 /* DropdownMenu+InternalFunctions.swift */,
-			);
-			path = Internals;
-			sourceTree = "<group>";
 		};
 		9DB7024E254B883D00CD327D /* Views */ = {
 			isa = PBXGroup;
