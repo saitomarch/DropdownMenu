@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		9DACC3F0254D172300C2AE13 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9DACC3F1254D172300C2AE13 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+				9DACC3F7254D172D00C2AE13 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+			productName = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		9D9A905B2538FFC200EA95B3 /* DropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D9A90592538FFC200EA95B3 /* DropdownMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D9A90622538FFDA00EA95B3 /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A90612538FFDA00EA95B3 /* DropdownMenu.swift */; };
@@ -17,6 +31,11 @@
 		9D9A90B325390A0D00EA95B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A90A6253909D100EA95B3 /* ViewController.swift */; };
 		9D9A90B825390B1400EA95B3 /* DropdownMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9A90562538FFC200EA95B3 /* DropdownMenu.framework */; };
 		9D9C144D25391672008FFCC5 /* DropdownMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9C144C25391672008FFCC5 /* DropdownMenuDelegate.swift */; };
+		9DACC3E3254D14F000C2AE13 /* DropdownMenu+DropdownMenuContentViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DACC3E2254D14F000C2AE13 /* DropdownMenu+DropdownMenuContentViewControllerDelegate.swift */; };
+		9DACC3E7254D159900C2AE13 /* DropdownMenu+InternalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DACC3E6254D159900C2AE13 /* DropdownMenu+InternalFunctions.swift */; };
+		9DACC3FC254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DACC3FB254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift */; };
+		9DACC401254D1C7F00C2AE13 /* DropdownMenuContentViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DACC400254D1C7F00C2AE13 /* DropdownMenuContentViewControllerDelegate.swift */; };
+		9DACC406254D1CB100C2AE13 /* DropdownMenuContentViewController+UIRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DACC405254D1CB100C2AE13 /* DropdownMenuContentViewController+UIRecognizerDelegate.swift */; };
 		9DB701D0254A257400CD327D /* DropdownMenuContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB701CF254A257400CD327D /* DropdownMenuContentViewController.swift */; };
 		9DB701D4254A46A500CD327D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB701D3254A46A500CD327D /* Constants.swift */; };
 		9DB701D8254A4F3F00CD327D /* DropdownMenuComponentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB701D7254A4F3F00CD327D /* DropdownMenuComponentButton.swift */; };
@@ -48,6 +67,11 @@
 		9D9C144C25391672008FFCC5 /* DropdownMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuDelegate.swift; sourceTree = "<group>"; };
 		9DACC2B8254CE76700C2AE13 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9DACC2BD254CEC9C00C2AE13 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9DACC3E2254D14F000C2AE13 /* DropdownMenu+DropdownMenuContentViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropdownMenu+DropdownMenuContentViewControllerDelegate.swift"; sourceTree = "<group>"; };
+		9DACC3E6254D159900C2AE13 /* DropdownMenu+InternalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropdownMenu+InternalFunctions.swift"; sourceTree = "<group>"; };
+		9DACC3FB254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropdownMenuContentViewController+UITableView.swift"; sourceTree = "<group>"; };
+		9DACC400254D1C7F00C2AE13 /* DropdownMenuContentViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuContentViewControllerDelegate.swift; sourceTree = "<group>"; };
+		9DACC405254D1CB100C2AE13 /* DropdownMenuContentViewController+UIRecognizerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropdownMenuContentViewController+UIRecognizerDelegate.swift"; sourceTree = "<group>"; };
 		9DB701CF254A257400CD327D /* DropdownMenuContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuContentViewController.swift; sourceTree = "<group>"; };
 		9DB701D3254A46A500CD327D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9DB701D7254A4F3F00CD327D /* DropdownMenuComponentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownMenuComponentButton.swift; sourceTree = "<group>"; };
@@ -137,9 +161,14 @@
 			children = (
 				9DB701D7254A4F3F00CD327D /* DropdownMenuComponentButton.swift */,
 				9DB701DC254A59AC00CD327D /* DropdownMenuTableViewCell.swift */,
+				9DACC400254D1C7F00C2AE13 /* DropdownMenuContentViewControllerDelegate.swift */,
 				9DB701CF254A257400CD327D /* DropdownMenuContentViewController.swift */,
+				9DACC405254D1CB100C2AE13 /* DropdownMenuContentViewController+UIRecognizerDelegate.swift */,
+				9DACC3FB254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift */,
 				9DB7023D254AC05D00CD327D /* DropdownMenuTransition.swift */,
 				9DB701D3254A46A500CD327D /* Constants.swift */,
+				9DACC3E2254D14F000C2AE13 /* DropdownMenu+DropdownMenuContentViewControllerDelegate.swift */,
+				9DACC3E6254D159900C2AE13 /* DropdownMenu+InternalFunctions.swift */,
 			);
 			path = Internals;
 			sourceTree = "<group>";
@@ -230,6 +259,9 @@
 					9D9A90902539096500EA95B3 = {
 						CreatedOnToolsVersion = 11.7;
 					};
+					9DACC3F0254D172300C2AE13 = {
+						CreatedOnToolsVersion = 12.1;
+					};
 				};
 			};
 			buildConfigurationList = 9D9A90502538FFC200EA95B3 /* Build configuration list for PBXProject "DropdownMenu" */;
@@ -247,6 +279,7 @@
 			targets = (
 				9D9A90552538FFC200EA95B3 /* DropdownMenu */,
 				9D9A90902539096500EA95B3 /* Example */,
+				9DACC3F0254D172300C2AE13 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +305,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9DACC3F7254D172D00C2AE13 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9D9A90522538FFC200EA95B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -281,9 +334,14 @@
 				9DB701DD254A59AC00CD327D /* DropdownMenuTableViewCell.swift in Sources */,
 				9DB701D4254A46A500CD327D /* Constants.swift in Sources */,
 				9DB701D8254A4F3F00CD327D /* DropdownMenuComponentButton.swift in Sources */,
+				9DACC3E3254D14F000C2AE13 /* DropdownMenu+DropdownMenuContentViewControllerDelegate.swift in Sources */,
 				9D9C144D25391672008FFCC5 /* DropdownMenuDelegate.swift in Sources */,
+				9DACC406254D1CB100C2AE13 /* DropdownMenuContentViewController+UIRecognizerDelegate.swift in Sources */,
+				9DACC3E7254D159900C2AE13 /* DropdownMenu+InternalFunctions.swift in Sources */,
 				9D9A90642539013600EA95B3 /* DropdownMenuDataSource.swift in Sources */,
 				9DB701D0254A257400CD327D /* DropdownMenuContentViewController.swift in Sources */,
+				9DACC401254D1C7F00C2AE13 /* DropdownMenuContentViewControllerDelegate.swift in Sources */,
+				9DACC3FC254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift in Sources */,
 				9D9A90622538FFDA00EA95B3 /* DropdownMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +618,24 @@
 			};
 			name = Release;
 		};
+		9DACC3F2254D172300C2AE13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT6BA589VL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9DACC3F3254D172300C2AE13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WT6BA589VL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -586,6 +662,15 @@
 			buildConfigurations = (
 				9D9A90A22539096800EA95B3 /* Debug */,
 				9D9A90A32539096800EA95B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DACC3F1254D172300C2AE13 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DACC3F2254D172300C2AE13 /* Debug */,
+				9DACC3F3254D172300C2AE13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

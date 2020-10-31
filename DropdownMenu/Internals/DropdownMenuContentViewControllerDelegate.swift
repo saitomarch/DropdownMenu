@@ -23,15 +23,13 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-    
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-    ) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
+protocol DropdownMenuContentViewControllerDelegate: class {
+    var numberOfRows: Int { get }
+    var maximumNumberOfRows: Int { get }
+    func attributedTitle(for row: Int) -> NSAttributedString?
+    func customView(for row: Int, reusing view: UIView?) -> UIView?
+    func accessoryView(for row: Int) -> UIView?
+    func backgroundColor(for row: Int) -> UIColor
+    func didSelect(row: Int)
+    func willDisappear()
 }

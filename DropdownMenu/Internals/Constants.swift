@@ -27,7 +27,7 @@ let defaultAnimationDuration: TimeInterval = 0.25
 
 let defaultRowHeight: CGFloat = 44.0
 let defaultDisclosureIndicatorSize: CGFloat = 8.0
-let defaultCornerRadius:CGFloat = 2.0
+let defaultCornerRadius: CGFloat = 2.0
 let defaultBackgroundDimmingOpacity: CGFloat = 0.2
 
 let shadowOpacity: Float = 0.2
@@ -39,10 +39,10 @@ extension UIColor {
 }
 
 var defaultDisclosureIndicatorImage: UIImage {
-    let a = defaultDisclosureIndicatorSize
-    let h = a * 0.866
-    let rect = CGRect(x: 0, y: a - h, width: a, height: h)
-    UIGraphicsBeginImageContextWithOptions(CGSize(width: a, height: a), false, 0)
+    let indicatorSize = defaultDisclosureIndicatorSize
+    let height = indicatorSize * 0.866
+    let rect = CGRect(x: 0, y: indicatorSize - height, width: indicatorSize, height: height)
+    UIGraphicsBeginImageContextWithOptions(CGSize(width: indicatorSize, height: indicatorSize), false, 0)
     let path = UIBezierPath()
     path.move(to: CGPoint(x: rect.minX, y: rect.minY))
     path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))

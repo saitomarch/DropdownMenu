@@ -113,7 +113,10 @@ extension ViewController: DropdownMenuDelegate {
         ])
     }
     
-    func dropdownMenu(_ dropdownMenu: DropdownMenu, attributedTitleFor indexPath: DropdownMenu.IndexPath) -> NSAttributedString? {
+    func dropdownMenu(
+        _ dropdownMenu: DropdownMenu,
+        attributedTitleFor indexPath: DropdownMenu.IndexPath
+    ) -> NSAttributedString? {
         let string = NSMutableAttributedString(string: "Color \(indexPath.row + 1): ", attributes: [
             .font: UIFont.systemFont(ofSize: 20.0, weight: .light),
             .foregroundColor: UIColor.white
