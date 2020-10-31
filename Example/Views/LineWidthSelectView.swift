@@ -21,12 +21,28 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+import UIKit
 
-//! Project version number for DropdownMenu.
-FOUNDATION_EXPORT double DropdownMenuVersionNumber;
-
-//! Project version string for DropdownMenu.
-FOUNDATION_EXPORT const unsigned char DropdownMenuVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <DropdownMenu/PublicHeader.h>
+class LineWidthSelectView: UIView {
+    var lineColor: UIColor? {
+        didSet { setNeedsDisplay() }
+    }
+    
+    var lineWidth: CGFloat = 0.0 {
+        didSet { setNeedsDisplay() }
+    }
+    
+    override func draw(_ rect: CGRect) {
+        let inset: CGFloat = 5.0
+        
+        let path = UIBezierPath()
+        path.lineWidth = lineWidth
+        path.lineCapStyle = .square
+        
+        path.move(to: CGPoint(x: rect.minX + inset + lineWidth / 2, y: rect.midY))
+        path.addLine(to: CGPoint(x: rect.maxX - inset - lineWidth / 2, y: rect.midY))
+        
+        lineColor?.setStroke()
+        path.stroke()
+    }
+}

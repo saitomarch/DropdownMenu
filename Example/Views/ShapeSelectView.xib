@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4vj-2F-d47" customClass="ShapeSelectView" customModule="Example" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVP-U8-5nJ" customClass="ShapeView" customModule="Example" customModuleProvider="target">
+                    <rect key="frame" x="10" y="12" width="20" height="20"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aVP-U8-5nJ" secondAttribute="height" multiplier="1:1" id="CPS-6c-2hE"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shape" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="CcS-ru-LdP">
+                    <rect key="frame" x="38" y="12.5" width="192" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <color key="textColor" red="0.035294117649999998" green="0.1764705882" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ffK-hd-oWe"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CcS-ru-LdP" firstAttribute="leading" secondItem="aVP-U8-5nJ" secondAttribute="trailing" constant="8" id="0OX-bH-20h"/>
+                <constraint firstItem="aVP-U8-5nJ" firstAttribute="top" secondItem="4vj-2F-d47" secondAttribute="top" constant="12" id="7CS-D7-3Sh"/>
+                <constraint firstItem="aVP-U8-5nJ" firstAttribute="leading" secondItem="4vj-2F-d47" secondAttribute="leading" constant="10" id="7K3-uw-7GA"/>
+                <constraint firstAttribute="bottom" secondItem="aVP-U8-5nJ" secondAttribute="bottom" constant="12" id="Afp-sq-3gE"/>
+                <constraint firstAttribute="trailing" secondItem="CcS-ru-LdP" secondAttribute="trailing" constant="10" id="PGg-Lg-CDW"/>
+                <constraint firstItem="CcS-ru-LdP" firstAttribute="centerY" secondItem="4vj-2F-d47" secondAttribute="centerY" id="QLu-bB-wcN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="shapeView" destination="aVP-U8-5nJ" id="Ky3-it-ieK"/>
+                <outlet property="textLabel" destination="CcS-ru-LdP" id="sow-ZM-ZqB"/>
+            </connections>
+            <point key="canvasLocation" x="1013" y="678"/>
+        </view>
+    </objects>
+</document>

@@ -21,12 +21,21 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+import UIKit
 
-//! Project version number for DropdownMenu.
-FOUNDATION_EXPORT double DropdownMenuVersionNumber;
-
-//! Project version string for DropdownMenu.
-FOUNDATION_EXPORT const unsigned char DropdownMenuVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <DropdownMenu/PublicHeader.h>
+extension UIColor {
+    static func color(hex: String) -> UIColor {
+        var rgb: UInt32 = 0
+        Scanner(
+            string: hex.uppercased().trimmingCharacters(
+                in: CharacterSet(charactersIn: "0123456789ABCDEF").inverted
+            )
+        ).scanHexInt32(&rgb)
+        return UIColor(
+            red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgb & 0xFF00) >> 8) / 255.0,
+            blue: CGFloat(rgb & 0xFF) / 255.0,
+            alpha: 1.0
+        )
+    }
+}

@@ -21,12 +21,15 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+import UIKit
 
-//! Project version number for DropdownMenu.
-FOUNDATION_EXPORT double DropdownMenuVersionNumber;
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        return true
+    }
+}
 
-//! Project version string for DropdownMenu.
-FOUNDATION_EXPORT const unsigned char DropdownMenuVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <DropdownMenu/PublicHeader.h>

@@ -21,12 +21,23 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+import UIKit
 
-//! Project version number for DropdownMenu.
-FOUNDATION_EXPORT double DropdownMenuVersionNumber;
-
-//! Project version string for DropdownMenu.
-FOUNDATION_EXPORT const unsigned char DropdownMenuVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <DropdownMenu/PublicHeader.h>
+class ShapeSelectView: UIView {
+    @IBOutlet weak var shapeView: ShapeView!
+    @IBOutlet weak var textLabel: UILabel!
+    
+    var isSelected: Bool = false {
+        didSet {
+            shapeView.fillColor = isSelected ? shapeView.strokeColor : .clear
+            textLabel.font = UIFont.systemFont(ofSize: textLabel.font.pointSize, weight: isSelected ? .medium : .light)
+        }
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        shapeView.fillColor = .clear
+        shapeView.strokeColor = textLabel.textColor
+        shapeView.lineWidth = 1
+    }
+}

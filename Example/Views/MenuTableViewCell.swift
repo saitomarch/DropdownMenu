@@ -21,12 +21,20 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+import UIKit
+import DropdownMenu
 
-//! Project version number for DropdownMenu.
-FOUNDATION_EXPORT double DropdownMenuVersionNumber;
-
-//! Project version string for DropdownMenu.
-FOUNDATION_EXPORT const unsigned char DropdownMenuVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <DropdownMenu/PublicHeader.h>
+class MenuTableViewCell: UITableViewCell {
+    @IBOutlet weak var dropdownMenu: DropdownMenu!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        dropdownMenu.rowTextAlignment = .center
+        dropdownMenu.selectedComponentBackgroundColor = UIColor(white: 0.93, alpha: 1.0)
+        dropdownMenu.dropdownBackgroundColor = UIColor(white: 0.96, alpha: 1.0)
+        dropdownMenu.backgroundDimmingOpacity = 0.0
+        
+        layoutIfNeeded()
+    }
+}

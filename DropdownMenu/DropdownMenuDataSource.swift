@@ -21,12 +21,23 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import <Foundation/Foundation.h>
+import Foundation
 
-//! Project version number for DropdownMenu.
-FOUNDATION_EXPORT double DropdownMenuVersionNumber;
-
-//! Project version string for DropdownMenu.
-FOUNDATION_EXPORT const unsigned char DropdownMenuVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <DropdownMenu/PublicHeader.h>
+/// Declares data source for dropdown menu
+@objc(PFDropdownMenuDataSource)
+public protocol DropdownMenuDataSource: class {
+    /// Number of component items in menu
+    /// - parameters:
+    ///    - dropdownMenu: The dropdown menu
+    /// - returns: Number of components of items in menu
+    @objc(numberOfComponentsInDropdownMenu:)
+    func numberOfComponentsIn(_ dropdownMenu: DropdownMenu) -> Int
+    
+    /// Number of rows in each component
+    /// - parameters:
+    ///    - dropdownMenu: The dropdown menu
+    ///    - component:The component for dropdown menu
+    /// - returns: Number of components of items in menu
+    @objc(dropdownMenu:numberOfRowsInComponent:)
+    func dropdownMenu(_ dropdownMenu: DropdownMenu, numberOfRowsIn component: Int) -> Int
+}
