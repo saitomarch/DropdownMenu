@@ -3,7 +3,8 @@ disabled_rules:
   - trailing_whitespace
 excluded:
   - Pods/
-  - Carthage:
+  - Carthage
+  - vendor
 line_length:
   ignores_comments: true
 type_body_length:
