@@ -1,0 +1,32 @@
+disabled_rules:
+  - force_cast
+  - trailing_whitespace
+excluded:
+  - Pods/
+  - Carthage
+  - vendor
+line_length:
+  ignores_comments: true
+type_body_length:
+  - 300
+  - 400
+file_length:
+  - 500
+  - 1200
+identifier_name:
+  min_length:
+    error: 4
+  excluded:
+    - id
+    - URL
+    - idx
+    - hex
+    - row
+    - rgb
+    - nib
+    - tap
+    - dx
+    - dy
+    - x
+    - y
+

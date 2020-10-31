@@ -43,7 +43,7 @@ class ChildViewController: UIViewController {
         dropdownMenu.delegate = self
         dropdownMenu.dataSource = self
         
-        dropdownMenu.layer.borderColor = UIColor(red: 0.78, green: 0.78, blue:0.8, alpha: 1.0).cgColor
+        dropdownMenu.layer.borderColor = UIColor(red: 0.78, green: 0.78, blue: 0.8, alpha: 1.0).cgColor
         dropdownMenu.layer.borderWidth = 0.5
         
         let selectedBackgroundColor = UIColor(red: 0.91, green: 0.92, blue: 0.94, alpha: 1.0)
@@ -116,7 +116,11 @@ extension ChildViewController: DropdownMenuDelegate {
         ])
     }
     
-    func dropdownMenu(_ dropdownMenu: DropdownMenu, viewFor indexPath: DropdownMenu.IndexPath, reusing view: UIView?) -> UIView? {
+    func dropdownMenu(
+        _ dropdownMenu: DropdownMenu,
+        viewFor indexPath: DropdownMenu.IndexPath,
+        reusing view: UIView?
+    ) -> UIView? {
         switch DropdownComponent.allCases[indexPath.component] {
         case .shape:
             var shapeSelectView: ShapeSelectView! = view as? ShapeSelectView
@@ -162,7 +166,9 @@ extension ChildViewController: DropdownMenuDelegate {
 extension ChildViewController {
     func color(for row: Int) -> UIColor {
         return UIColor(
-            hue: CGFloat(row) / CGFloat(dropdownMenu.numberOfRows(in: DropdownComponent.allCases.firstIndex(of: .color)!)),
+            hue: CGFloat(row) / CGFloat(
+                dropdownMenu.numberOfRows(in: DropdownComponent.allCases.firstIndex(of: .color)!)
+            ),
             saturation: 1.0,
             brightness: 1.0,
             alpha: 1.0

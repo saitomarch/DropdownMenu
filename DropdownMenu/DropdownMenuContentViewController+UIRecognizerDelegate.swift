@@ -23,15 +23,15 @@
 
 import UIKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-    
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-    ) -> Bool {
-        // Override point for customization after application launch.
+extension DropdownMenuContentViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
+        if touch.view?.isDescendant(of: tableView) ?? false {
+            return false
+        }
         return true
+    }
+    
+    @objc func handleTap(_ tapRecognizer: UITapGestureRecognizer) {
+        delegate?.didSelect(row: NSNotFound)
     }
 }

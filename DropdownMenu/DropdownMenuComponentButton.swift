@@ -63,7 +63,7 @@ class DropdownMenuComponentButton: UIButton {
 
     static var disclosureIndicatorImage: UIImage?
     
-    // MARK: Overrides
+    // MARK: Overrides (Property)
     override var isSelected: Bool {
         didSet {
             var angle = isSelected ? disclosureIndicatorAngle : 0.0
@@ -166,7 +166,7 @@ class DropdownMenuComponentButton: UIButton {
         setNeedsLayout()
     }
     
-    // MARK: Overrides
+    // MARK: Overrides (Mehtod)
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         let target = super.hitTest(point, with: event)
         if bounds.contains(point) && !(target?.isKind(of: UIControl.self) ?? false) {

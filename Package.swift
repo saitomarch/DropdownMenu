@@ -1,3 +1,4 @@
+// swift-tools-version:5.3
 /*
  Copyright (C) 2020 SAITO Tomomi
 
@@ -21,17 +22,23 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import UIKit
+import PackageDescription
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-    
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-    ) -> Bool {
-        // Override point for customization after application launch.
-        return true
-    }
-}
+let package = Package(
+    name: "DropdownMenu",
+    platforms: [
+        .iOS(.v12)
+    ],
+    products: [
+        .library(name: "DropdownMenu", targets: ["DropdownMenu"])
+    ],
+    targets: [
+        .target(
+            name: "DropdownMenu",
+            path: "DropdownMenu",
+            exclude: ["Info.plist"],
+            linkerSettings: [.linkedFramework("UIKit", .when(platforms: [.iOS]))]
+        )
+    ],
+    swiftLanguageVersions: [.v5]
+)
