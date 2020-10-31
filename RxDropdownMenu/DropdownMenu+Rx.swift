@@ -1,4 +1,3 @@
-// swift-tools-version:5.3
 /*
  Copyright (C) 2020 SAITO Tomomi
 
@@ -22,33 +21,10 @@
  WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-import PackageDescription
+import DropdownMenu
+import RxSwift
+import RxCocoa
 
-let package = Package(
-    name: "DropdownMenu",
-    platforms: [
-        .iOS(.v12)
-    ],
-    products: [
-        .library(name: "DropdownMenu", targets: ["DropdownMenu"]),
-        .library(name: "RxDropdownMenu", targets: ["RxDropdownMenu"])
-    ],
-    dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "5.0.0"))
-    ],
-    targets: [
-        .target(
-            name: "DropdownMenu",
-            path: "DropdownMenu",
-            exclude: ["Info.plist"]
-        ),
-        .target(
-            name: "RxDropdownMenu",
-            dependencies: ["DropdownMenu", "RxSwift", .product(name: "RxCocoa", package: "RxSwift")],
-            path: "RxDropdownMenu",
-            exclude: ["Info.plist"]
-        )
-
-    ],
-    swiftLanguageVersions: [.v5]
-)
+public extension Reactive where Base: DropdownMenu {
+    
+}
