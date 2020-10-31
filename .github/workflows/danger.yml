@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - develop
+      - master
+  pull_request:
+    branches:
+      - develop
+      - master
+
+defaults:
+  run:
+    shell: zsh
+
+jobs:
+  danger:
+    runs-on: macos-latest
+    steps:
+      - name: Install SwiftLint
+        run: |
+          brew install swiftlint
+      - name: Install RubyGems
+        run:
+          bundle install --path=vendor/bundle
+      - name: Run Danger
+        run: |
+          bundle exec danger
+
