@@ -30,7 +30,7 @@ let package = Package(
         .iOS(.v12)
     ],
     products: [
-        .library(name: "DropdownMenu", targets: ["DropdownMenu"]),
+        .library(name: "DropdownMenu", targets: ["DropdownMenu"])
     ],
     targets: [
         .target(
@@ -38,7 +38,7 @@ let package = Package(
             path: "DropdownMenu",
             exclude: ["Info.plist"],
             linkerSettings: [.linkedFramework("UIKit", .when(platforms: [.iOS]))]
-        ),
+        )
     ],
     swiftLanguageVersions: [.v5]
 )

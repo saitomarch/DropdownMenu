@@ -52,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D833A28254DA5A600DFA690 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		9D9A90562538FFC200EA95B3 /* DropdownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropdownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9A90592538FFC200EA95B3 /* DropdownMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropdownMenu.h; sourceTree = "<group>"; };
 		9D9A905A2538FFC200EA95B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		9D9A904C2538FFC200EA95B3 = {
 			isa = PBXGroup;
 			children = (
+				9D833A28254DA5A600DFA690 /* Package.swift */,
 				9DACC2BD254CEC9C00C2AE13 /* LICENSE */,
 				9DACC2B8254CE76700C2AE13 /* README.md */,
 				9D9A90A5253909D100EA95B3 /* Example */,
