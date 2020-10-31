@@ -18,6 +18,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Set Ruby version
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
       - name: Install RubyGems
         run:
           bundle install --path=vendor/bundle
