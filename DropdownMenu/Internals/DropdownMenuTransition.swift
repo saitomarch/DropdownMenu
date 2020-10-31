@@ -36,6 +36,7 @@ class DropdownMenuTransition {
         controller = contentViewController
     }
     
+    // swiftlint:disable function_body_length
     func presentDropdown(in containerView: UIView, animated: Bool, completion: (() -> Void)?) {
         self.containerView = containerView
         
@@ -73,7 +74,7 @@ class DropdownMenuTransition {
                 }
             }
             
-            scrollViewAdjustBlock =  { [weak self] in
+            scrollViewAdjustBlock = { [weak self] in
                 guard let self = self else { return }
                 if self.menu.adjustsContentInset && inset > 0 {
                     self.previousScrollViewBottomInset = scrollView.contentInset.bottom
@@ -141,7 +142,8 @@ class DropdownMenuTransition {
             }
         )
     }
-    
+    // swiftlint:enable function_body_length
+
     func dismissDropdown(animated: Bool, completion: (() -> Void)?) {
         controller.beginAppearanceTransition(false, animated: true)
         var scrollViewResetBlock = {}
@@ -175,10 +177,7 @@ class DropdownMenuTransition {
         isAnimating = true
         
         UIView.animate(
-            withDuration: animationDuration,
-            delay: 0.0,
-            usingSpringWithDamping: 1.0,
-            initialSpringVelocity: 0.0,
+            withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 0.0,
             options: [],
             animations: { [weak self] in
                 guard let self = self else { return }

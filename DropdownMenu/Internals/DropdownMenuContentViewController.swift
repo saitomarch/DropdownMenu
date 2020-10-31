@@ -23,17 +23,6 @@
 
 import UIKit
 
-protocol DropdownMenuContentViewControllerDelegate: class {
-    var numberOfRows: Int { get }
-    var maximumNumberOfRows: Int { get }
-    func attributedTitle(for row: Int) -> NSAttributedString?
-    func customView(for row: Int, reusing view: UIView?) -> UIView?
-    func accessoryView(for row: Int) -> UIView?
-    func backgroundColor(for row: Int) -> UIColor
-    func didSelect(row: Int)
-    func willDisappear()
-}
-
 class DropdownMenuContentViewController: UIViewController {
     // MARK: - Properties
     private var heightConstraint: NSLayoutConstraint!
@@ -149,6 +138,7 @@ class DropdownMenuContentViewController: UIViewController {
         return presentingViewController?.preferredStatusBarStyle ?? .default
     }
     
+    // swiftlint:disable function_body_length
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -246,7 +236,7 @@ class DropdownMenuContentViewController: UIViewController {
         rightConstraint = NSLayoutConstraint(
             item: view!, attribute: .trailing, relatedBy: .equal,
             toItem: containerView, attribute: .trailing,
-            multiplier: 1.0,constant: 0.0
+            multiplier: 1.0, constant: 0.0
         )
         view.addConstraints([
             leftConstraint,
@@ -354,7 +344,8 @@ class DropdownMenuContentViewController: UIViewController {
             )
         ])
     }
-    
+    // swiftlint:enable function_body_length
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         updateContainerHeight()
@@ -457,59 +448,5 @@ class DropdownMenuContentViewController: UIViewController {
                 dy: self.separatorViewOffset.vertical
             )
         }
-    }
-}
-
-extension DropdownMenuContentViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        if touch.view?.isDescendant(of: tableView) ?? false {
-            return false
-        }
-        return true
-    }
-    
-    @objc func handleTap(_ tapRecognizer: UITapGestureRecognizer) {
-        delegate?.didSelect(row: NSNotFound)
-    }
-}
-
-extension DropdownMenuContentViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rowsCount
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-                as? DropdownMenuTableViewCell else {
-            fatalError("Invalid cell loaded")
-        }
-        
-        var customView = cell.currentCustomView
-        customView = delegate?.customView(for: indexPath.row, reusing: customView)
-        
-        cell.set(customView: customView)
-        if customView == nil {
-            let attributedTitle = delegate?.attributedTitle(for: indexPath.row)
-            cell.setAttributedTitle(attributedTitle)
-        }
-        
-        cell.setHighlightColor(highlightColor)
-        
-        cell.backgroundColor = delegate?.backgroundColor(for: indexPath.row)
-        
-        cell.accessoryView = delegate?.accessoryView(for: indexPath.row)
-        
-        cell.textLabel?.textAlignment = textAlignment
-        
-        cell.preservesSuperviewLayoutMargins = false
-        cell.layoutMargins = .zero
-        cell.separatorInset = .zero
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        delegate?.didSelect(row: indexPath.row)
     }
 }
