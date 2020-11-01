@@ -25,9 +25,13 @@
 		9D833A3E254E195B00DFA690 /* RxDropdownMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D833A37254E195B00DFA690 /* RxDropdownMenu.framework */; };
 		9D833A3F254E195B00DFA690 /* RxDropdownMenu.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D833A37254E195B00DFA690 /* RxDropdownMenu.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D833A4B254E1A6700DFA690 /* DropdownMenu+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D833A4A254E1A6700DFA690 /* DropdownMenu+Rx.swift */; };
-		9D833A54254E1BF600DFA690 /* DropdownMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9A90562538FFC200EA95B3 /* DropdownMenu.framework */; };
 		9D833A59254E23DA00DFA690 /* RxDropdownMenuDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D833A58254E23DA00DFA690 /* RxDropdownMenuDelegateProxy.swift */; };
 		9D833A5E254E240300DFA690 /* RxDropdownMenuDataSourceProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D833A5D254E240300DFA690 /* RxDropdownMenuDataSourceProxy.swift */; };
+		9D833A66254E35B600DFA690 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D833A65254E35B600DFA690 /* Utilities.swift */; };
+		9D833A73254E541100DFA690 /* DropdownMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D9A90562538FFC200EA95B3 /* DropdownMenu.framework */; };
+		9D833A77254E543F00DFA690 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D833A74254E543F00DFA690 /* RxRelay.framework */; };
+		9D833A78254E543F00DFA690 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D833A75254E543F00DFA690 /* RxSwift.framework */; };
+		9D833A79254E543F00DFA690 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D833A76254E543F00DFA690 /* RxCocoa.framework */; };
 		9D9A905B2538FFC200EA95B3 /* DropdownMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D9A90592538FFC200EA95B3 /* DropdownMenu.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D9A90622538FFDA00EA95B3 /* DropdownMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A90612538FFDA00EA95B3 /* DropdownMenu.swift */; };
 		9D9A90642539013600EA95B3 /* DropdownMenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9A90632539013600EA95B3 /* DropdownMenuDataSource.swift */; };
@@ -90,6 +94,10 @@
 		9D833A4A254E1A6700DFA690 /* DropdownMenu+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropdownMenu+Rx.swift"; sourceTree = "<group>"; };
 		9D833A58254E23DA00DFA690 /* RxDropdownMenuDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDropdownMenuDelegateProxy.swift; sourceTree = "<group>"; };
 		9D833A5D254E240300DFA690 /* RxDropdownMenuDataSourceProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDropdownMenuDataSourceProxy.swift; sourceTree = "<group>"; };
+		9D833A65254E35B600DFA690 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9D833A74254E543F00DFA690 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		9D833A75254E543F00DFA690 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		9D833A76254E543F00DFA690 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		9D9A90562538FFC200EA95B3 /* DropdownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropdownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9A90592538FFC200EA95B3 /* DropdownMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropdownMenu.h; sourceTree = "<group>"; };
 		9D9A905A2538FFC200EA95B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D833A54254E1BF600DFA690 /* DropdownMenu.framework in Frameworks */,
+				9D833A73254E541100DFA690 /* DropdownMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +153,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D833A77254E543F00DFA690 /* RxRelay.framework in Frameworks */,
+				9D833A78254E543F00DFA690 /* RxSwift.framework in Frameworks */,
+				9D833A79254E543F00DFA690 /* RxCocoa.framework in Frameworks */,
 				9D833A3E254E195B00DFA690 /* RxDropdownMenu.framework in Frameworks */,
 				9D9A90B825390B1400EA95B3 /* DropdownMenu.framework in Frameworks */,
 			);
@@ -159,6 +170,7 @@
 				9D833A4A254E1A6700DFA690 /* DropdownMenu+Rx.swift */,
 				9D833A58254E23DA00DFA690 /* RxDropdownMenuDelegateProxy.swift */,
 				9D833A5D254E240300DFA690 /* RxDropdownMenuDataSourceProxy.swift */,
+				9D833A65254E35B600DFA690 /* Utilities.swift */,
 				9D833A39254E195B00DFA690 /* RxDropdownMenu.h */,
 				9D833A3A254E195B00DFA690 /* Info.plist */,
 			);
@@ -168,6 +180,9 @@
 		9D833A53254E1BF600DFA690 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9D833A76254E543F00DFA690 /* RxCocoa.framework */,
+				9D833A74254E543F00DFA690 /* RxRelay.framework */,
+				9D833A75254E543F00DFA690 /* RxSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -434,6 +449,7 @@
 			files = (
 				9D833A5E254E240300DFA690 /* RxDropdownMenuDataSourceProxy.swift in Sources */,
 				9D833A4B254E1A6700DFA690 /* DropdownMenu+Rx.swift in Sources */,
+				9D833A66254E35B600DFA690 /* Utilities.swift in Sources */,
 				9D833A59254E23DA00DFA690 /* RxDropdownMenuDelegateProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

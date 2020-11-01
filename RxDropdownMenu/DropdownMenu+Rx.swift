@@ -24,7 +24,39 @@
 import DropdownMenu
 import RxSwift
 import RxCocoa
+import Foundation
 
-public extension Reactive where Base: DropdownMenu {
+extension Reactive where Base: DropdownMenu {
+    /// Reactive wrapper for `delegate`
+    public var delegate: DelegateProxy<DropdownMenu, DropdownMenuDelegate> {
+        return RxDropdownMenuDelegateProxy.proxy(for: base)
+    }
     
+    /// Reactive wrapper for `dataSource`
+    public var dataSource: DelegateProxy<DropdownMenu, DropdownMenuDataSource> {
+        return RxDropdownMenuDataSourceProxy.proxy(for: base)
+    }
+    
+    /// Installs data source as forwarning delegate on `rx.dataSource`.
+    /// Data source won't be installed
+    ///
+    /// It enables using normal delegate mechanism, wotj reactove delegate mechanism.
+    ///
+    /// - parameter dataSource: Data source object.
+    /// - returns: Disposable object that can be used to unbind the data source
+    public func setDataSource(_ dataSource: DropdownMenuDataSource) -> Disposable {
+        return RxDropdownMenuDataSourceProxy.installForwardDelegate(dataSource, retainDelegate: false, onProxyForObject: base)
+    }
+    
+    // MARK: - Events
+    
+    /// Reactive wrapper for `delegate` message `dropdownMenu(_:didSelect:)`
+    public var itemSelected: ControlEvent<DropdownMenu.IndexPath> {
+        let source = delegate
+            .methodInvoked(#selector(DropdownMenuDelegate.dropdownMenu(_:didSelect:)))
+            .map { (a) in
+                return try castOrThrow(object: a[1], resultType: DropdownMenu.IndexPath.self)
+            }
+        return ControlEvent(events: source)
+    }
 }
