@@ -11,7 +11,7 @@ defaults:
     shell: bash
 
 jobs:
-  danger:
+  cocoapods_lint:
     runs-on: macos-latest
     steps:
       - name: Checkout repository
