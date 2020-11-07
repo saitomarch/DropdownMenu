@@ -1,10 +1,9 @@
 name: Run CocoaPods lint
 
 on:
-  pull_request:
-    branches:
-      - develop
-      - master
+  push:
+    tags:
+      - v*
 
 defaults:
   run:

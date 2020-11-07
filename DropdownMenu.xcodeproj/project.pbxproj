@@ -88,6 +88,7 @@
 
 /* Begin PBXFileReference section */
 		9D833A28254DA5A600DFA690 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		9D8CE4BA255656BD00036B50 /* DropdownMenu.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = DropdownMenu.podspec; sourceTree = "<group>"; };
 		9D833A37254E195B00DFA690 /* RxDropdownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxDropdownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D833A39254E195B00DFA690 /* RxDropdownMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxDropdownMenu.h; sourceTree = "<group>"; };
 		9D833A3A254E195B00DFA690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -190,6 +191,7 @@
 		9D9A904C2538FFC200EA95B3 = {
 			isa = PBXGroup;
 			children = (
+				9D8CE4BA255656BD00036B50 /* DropdownMenu.podspec */,
 				9D833A28254DA5A600DFA690 /* Package.swift */,
 				9DACC2BD254CEC9C00C2AE13 /* LICENSE */,
 				9DACC2B8254CE76700C2AE13 /* README.md */,
