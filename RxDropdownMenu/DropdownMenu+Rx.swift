@@ -54,9 +54,23 @@ extension Reactive where Base: DropdownMenu {
     public var itemSelected: ControlEvent<DropdownMenu.IndexPath> {
         let source = delegate
             .methodInvoked(#selector(DropdownMenuDelegate.dropdownMenu(_:didSelect:)))
-            .map { (a) in
-                return try castOrThrow(object: a[1], resultType: DropdownMenu.IndexPath.self)
-            }
+            .map { try castOrThrow(object: $0[1], resultType: DropdownMenu.IndexPath.self) }
+        return ControlEvent(events: source)
+    }
+    
+    /// Reactive wrapper for `delegate` message `dropdownMenu(_:didOpen:)`
+    public var open: ControlEvent<Int> {
+        let source = delegate
+            .methodInvoked(#selector(DropdownMenuDelegate.dropdownMenu(_:didOpen:)))
+            .map { try castOrThrow(object: $0[1], resultType: Int.self) }
+        return ControlEvent(events: source)
+    }
+    
+    /// Reactive wrapper for `delegate` message `dropdownMenu(_:didClose:)`
+    public var close: ControlEvent<Int> {
+        let source = delegate
+            .methodInvoked(#selector(DropdownMenuDelegate.dropdownMenu(_:didClose:)))
+            .map { try castOrThrow(object: $0[1], resultType: Int.self) }
         return ControlEvent(events: source)
     }
 }
