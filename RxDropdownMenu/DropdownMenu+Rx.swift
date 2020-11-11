@@ -40,7 +40,7 @@ extension Reactive where Base: DropdownMenu {
     /// Installs data source as forwarning delegate on `rx.dataSource`.
     /// Data source won't be installed
     ///
-    /// It enables using normal delegate mechanism, wotj reactove delegate mechanism.
+    /// It enables using normal delegate mechanism, with reactive delegate mechanism.
     ///
     /// - parameter dataSource: Data source object.
     /// - returns: Disposable object that can be used to unbind the data source
