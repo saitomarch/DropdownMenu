@@ -20,7 +20,7 @@ jobs:
       - name: Set Ruby version
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: '2.6'
+          ruby-version: '3.0'
       - name: Cache RubyGems bundles
         uses: actions/cache@v2
         with:
