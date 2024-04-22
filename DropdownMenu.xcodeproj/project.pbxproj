@@ -49,6 +49,7 @@
 		9DB7025E254B8BEA00CD327D /* LineWidthSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB7025D254B8BEA00CD327D /* LineWidthSelectView.swift */; };
 		9DB70262254B8CC400CD327D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB70261254B8CC400CD327D /* MenuTableViewCell.swift */; };
 		9DB70267254B939F00CD327D /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB70266254B939F00CD327D /* Utilities.swift */; };
+		9DCD06242BD726C200DFA611 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD06232BD726C200DFA611 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		9DB7025D254B8BEA00CD327D /* LineWidthSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineWidthSelectView.swift; sourceTree = "<group>"; };
 		9DB70261254B8CC400CD327D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		9DB70266254B939F00CD327D /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9DCD06232BD726C200DFA611 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				9DACC3FB254D1C3700C2AE13 /* DropdownMenuContentViewController+UITableView.swift */,
 				9DB7023D254AC05D00CD327D /* DropdownMenuTransition.swift */,
 				9DB701D3254A46A500CD327D /* Constants.swift */,
+				9DCD06232BD726C200DFA611 /* PrivacyInfo.xcprivacy */,
 			);
 			path = DropdownMenu;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DCD06242BD726C200DFA611 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +530,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.DropdownMenu";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -559,7 +563,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.3.1;
+				MARKETING_VERSION = 0.4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.DropdownMenu";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -584,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.DropdownMenu.Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -607,7 +611,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.project-flora.DropdownMenu.Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
