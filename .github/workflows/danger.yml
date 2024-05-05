@@ -23,6 +23,8 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
+      - name: Install CocoaPods
+        run: bundle exec pod install
       - name: Run Danger
         run: |
           bundle exec danger
