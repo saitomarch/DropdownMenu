@@ -417,5 +417,4 @@ import UIKit
     
     var components: [Int] = []
     var selectedRows: [IndexSet] = []
-    
 }
