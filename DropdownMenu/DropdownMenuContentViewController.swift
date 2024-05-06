@@ -23,6 +23,7 @@
 
 import UIKit
 
+// swiftlint:disable type_body_length
 class DropdownMenuContentViewController: UIViewController {
     // MARK: - Properties
     private var heightConstraint: NSLayoutConstraint!
@@ -450,3 +451,4 @@ class DropdownMenuContentViewController: UIViewController {
         }
     }
 }
+// swiftlint:enable type_body_length

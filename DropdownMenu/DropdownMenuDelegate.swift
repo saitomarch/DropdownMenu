@@ -25,7 +25,7 @@ import UIKit
 
 /// Delegate protocol for dropdown menu
 @objc(PFDropdownMenuDelegate)
-public protocol DropdownMenuDelegate: class {
+public protocol DropdownMenuDelegate: AnyObject {
     /// Width for component
     /// - parameters:
     ///    - dropdownMenu: The dropdown menu

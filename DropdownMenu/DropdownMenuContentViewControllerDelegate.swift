@@ -23,7 +23,8 @@
 
 import UIKit
 
-protocol DropdownMenuContentViewControllerDelegate: class {
+// swiftlint:disable type_name
+protocol DropdownMenuContentViewControllerDelegate: AnyObject {
     var numberOfRows: Int { get }
     var maximumNumberOfRows: Int { get }
     func attributedTitle(for row: Int) -> NSAttributedString?
@@ -33,3 +34,4 @@ protocol DropdownMenuContentViewControllerDelegate: class {
     func didSelect(row: Int)
     func willDisappear()
 }
+// swiftlint:enable type_name

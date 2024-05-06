@@ -25,7 +25,7 @@ import Foundation
 
 /// Declares data source for dropdown menu
 @objc(PFDropdownMenuDataSource)
-public protocol DropdownMenuDataSource: class {
+public protocol DropdownMenuDataSource: AnyObject {
     /// Number of component items in menu
     /// - parameters:
     ///    - dropdownMenu: The dropdown menu
