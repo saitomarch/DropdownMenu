@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "PFDropdownMenu"
-  spec.version      = "0.4.0"
+  spec.version      = "0.4.1"
   spec.summary      = "Dropdown Menu for iOS"
   spec.homepage     = "https://github.com/saitomarch/DropdownMenu"
   spec.license      = "MIT"
